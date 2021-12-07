@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Thank you Page</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<nav>
+		<div class="ui fixed inverted menu">
+			<div class="ui container">
+				<div class="header item"><i class="code icon"></i>Online Voting</div>
+			
+				<% if(!currentUser){ %>
+				<a href="/login/voter" class="item">Login</a>
+				<a href="/register" class="item">Sign Up</a>
+				<% } else { %>
+				
+				<% } %>
+			</div>
+		</div>
+		</nav>
+		
+		<div class="container">
+		<% if(error && error.length>0) { %>
+		<div style = "position:relative; left:80px; top:60px;" class="alert alert-danger" role="alert">
+            <%= error %>
+		</div>
+		<%  } %>
+			<% if(success && success.length>0) { %>
+		<div style = "position:relative; left:80px; top:60px;" class="alert alert-success" role="alert">
+  			<%= success %>
+		</div>	
+			<%  } %>
+		</div>
+		
