@@ -1,0 +1,37 @@
+<%-include("partials/header1") %>
+
+
+<div class="ui main text container">
+	<div class="ui huge header">Candidates</div>
+	<div class="ui top attached segment">
+		<div class="ui divided items">
+			<% candidates.forEach(function(admin){ %>
+	<div class="item">
+		<div class="image">
+			<img src="<%= admin.cimage %>">
+		</div>
+		<div class="content">
+			<a class="header" href="/admin/<%=admin._id %>"><%= admin.cname %></a>
+			<h2><%= admin.cage %></h2>
+			<h2><%= admin.cparty %></h2>
+			<div class="meta">
+				<span><%=admin.created.toDateString() %></span>
+			</div>
+			<div class="description">
+				<p><%- admin.cinfo.substring(0,100) %>...</p>
+			</div>
+			<div class="extra">
+				<a class="ui floated basic pink button" href="/admin/<%=admin._id %>">
+				READ MORE
+					<i class="right chevron icon"></i>
+				</a>
+			</div>
+		</div>
+		
+		</div>
+		<% }) %>
+		</div>
+	</div>
+</div>
+
+<%-include("partials/footer") %>

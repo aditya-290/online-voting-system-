@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+<div class="ui main text container segment">
+	<div class="ui huge header"><%= candidate.cname%></div>
+	<div class="ui top attached ">
+		<div class="item">
+			<img class="ui centered rounded image" src="<%= candidate.cimage %>">
+			<div class="content">
+				<span><%=candidate.created.toDateString() %></span>
+			</div>
+			<div class="description">
+				<p><%- candidate.cage %></p>
+			</div>
+			<div class="description">
+				<p><%- candidate.cparty %></p>
+			</div>
+			<div class="description">
+				<p><%- candidate.cinfo %></p>
+			</div>
+			<a class="ui orange basic button" href="/admin/<%= candidate._id %>/edit">EDIT</a>
+			<form id="delete" action="/admin/<%= candidate._id %>?_method=DELETE" method="POST">
+				<button class="ui red basic button">
+					Delete
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+<%- include("partials/footer") %>

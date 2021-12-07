@@ -1,0 +1,20 @@
+<%-include("partials/header2") %>
+<div class="ui main text container segment">
+	<div class="ui huge header">New Registration</div>
+<form class="ui form" action="/register" method="POST">
+	<div class="field">
+			<label>NAME</label>
+	<input type="text" name="username" placeholder="username">
+		</div>
+	<div class="field">
+			<label>Password</label>
+	<input type="password" name="password" placeholder="password">
+		</div>
+	
+	
+	
+	<button class="ui blue button">
+		Sign Up
+	</button>
+</form>
+<%-include("partials/footer") %>

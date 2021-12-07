@@ -1,0 +1,15 @@
+<%-include("partials/header3") %>
+<div class="ui main text container segment">
+	<div class="ui huge header">Admin Login</div>
+<form class="ui form" action="/login/admin" method="POST">
+	<div class="field">
+			<label>NAME</label>
+	<input type="text" name="username" placeholder="username">
+		</div>
+	<div class="field">
+			<label>Password</label>
+	<input type="text" name="password" placeholder="password">
+		</div>
+	<input type="submit" value="login!">
+</form>
+<%-include("partials/footer") %>
